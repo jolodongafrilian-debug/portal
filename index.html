@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFATech Official Portal - Download</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: #05070f; }
+        .aurora {
+            position: fixed; inset: 0; z-index: -2; overflow: hidden;
+            background: #05070f;
+        }
+        .aurora span {
+            position: absolute; border-radius: 9999px; filter: blur(90px); opacity: .35;
+            animation: drift 18s ease-in-out infinite alternate;
+        }
+        .aurora span:nth-child(1) { width: 480px; height: 480px; left: -120px; top: -120px; background: #2563eb; }
+        .aurora span:nth-child(2) { width: 420px; height: 420px; right: -100px; top: 20%; background: #7c3aed; animation-delay: -6s; }
+        .aurora span:nth-child(3) { width: 380px; height: 380px; left: 30%; bottom: -140px; background: #06b6d4; animation-delay: -12s; }
+        @keyframes drift {
+            from { transform: translate(0,0) scale(1); }
+            to { transform: translate(60px, 40px) scale(1.15); }
+        }
+        .grid-overlay {
+            position: fixed; inset: 0; z-index: -1; pointer-events: none;
+            background-image: radial-gradient(rgba(148,163,184,.12) 1px, transparent 1px);
+            background-size: 26px 26px;
+            mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+        }
+        .glass { background: rgba(15,23,42,.62); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+        @keyframes glowPulse {
+            0%,100% { box-shadow: 0 0 30px rgba(59,130,246,.35), 0 0 80px rgba(59,130,246,.12); }
+            50% { box-shadow: 0 0 50px rgba(59,130,246,.55), 0 0 120px rgba(59,130,246,.2); }
+        }
+        .glow-cta { animation: glowPulse 4s ease-in-out infinite; }
+        .grad-text {
+            background: linear-gradient(100deg, #60a5fa, #a78bfa 45%, #22d3ee);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .card-hover { transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s; }
+        .card-hover:hover { transform: translateY(-6px); border-color: rgba(96,165,250,.45); box-shadow: 0 20px 50px -20px rgba(59,130,246,.35); }
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after {
+            content: ''; position: absolute; top: 0; left: -80%; width: 50%; height: 100%;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+            transform: skewX(-20deg); animation: shine 3.5s ease-in-out infinite;
+        }
+        @keyframes shine { 0% { left: -80%; } 55%,100% { left: 130%; } }
+        .float-slow { animation: floatY 6s ease-in-out infinite; }
+        @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body class="text-slate-100 font-sans min-h-screen selection:bg-blue-600 selection:text-white">
+
+    <div class="aurora"><span></span><span></span><span></span></div>
+    <div class="grid-overlay"></div>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="relative w-12 h-12 rounded-full overflow-hidden border-2 border-blue-500/60 shadow-lg shadow-blue-500/30">
+                    <img src="afatech-logo.jpg" alt="AFATech Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight grad-text font-display">AFATECH</span>
+                    <span class="block text-[11px] font-medium text-slate-400 tracking-[0.2em] uppercase">Official Portal</span>
+                </div>
+            </div>
+            <a href="https://chat.whatsapp.com/Gxtq893YTjX3PK5SQRo2RQ" target="_blank" class="flex items-center space-x-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-4 py-2.5 rounded-xl transition-all duration-300 shadow-lg shadow-emerald-600/30 hover:scale-105">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline">Gabung Grup</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+
+        <!-- HERO -->
+        <section class="text-center pt-14 pb-10 sm:pt-20 sm:pb-14">
+            <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-400/25 px-4 py-2 rounded-full text-blue-300 text-sm font-semibold mb-7 glass">
+                <span class="relative flex h-2.5 w-2.5">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-60"></span>
+                    <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-400"></span>
+                </span>
+                <span>Portal Resmi Aplikasi Terupdate</span>
+            </div>
+            <h1 class="font-display text-5xl sm:text-7xl font-bold tracking-tight mb-6 leading-[1.05]">
+                Pusat Unduhan<br><span class="grad-text">AFATech</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg leading-relaxed">
+                Download aplikasi AFATech Dola versi terbaru, tools pendukung Motion Control,
+                serta panduan instalasi dan penggunaannya — semua di satu tempat.
+            </p>
+        </section>
+
+        <!-- APLIKASI UTAMA : AFATECH DOLA v5.5 -->
+        <section class="mb-16">
+            <div class="flex items-center space-x-3 mb-7">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-600/40">
+                    <i class="fa-solid fa-mobile-screen"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white font-display flex items-center gap-3">
+                        <span>AFATech Dola</span>
+                        <span class="text-[11px] bg-blue-500/15 text-blue-300 px-3 py-1 rounded-full border border-blue-400/25 font-semibold tracking-wide">APLIKASI UTAMA</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-0.5">Generator video AI — download versi terbaru di bawah</p>
+                </div>
+            </div>
+
+            <!-- Featured card v5.5 -->
+            <div class="relative rounded-3xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-400 to-cyan-400 glow-cta">
+                <div class="rounded-3xl glass p-7 sm:p-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-8">
+                        <div class="float-slow shrink-0 mx-auto lg:mx-0">
+                            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-500 flex items-center justify-center shadow-2xl shadow-blue-600/50">
+                                <i class="fa-solid fa-clapperboard text-white text-5xl"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center lg:text-left">
+                            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-3">
+                                <span class="bg-emerald-500/15 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-emerald-400/25">v5.5</span>
+                                <span class="bg-blue-500/15 text-blue-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-400/25">TERBARU</span>
+                                <span class="bg-violet-500/15 text-violet-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-violet-400/25">Android</span>
+                            </div>
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-white mb-2">AFATech Dola v5.5</h3>
+                            <p class="text-slate-400 text-sm sm:text-base mb-6 max-w-xl">
+                                Versi terbaru dengan sistem lisensi key, performa optimal, dan fitur Agent.
+                                Aktivasi dengan key lisensi dari admin setelah instalasi.
+                            </p>
+                            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 max-w-2xl mx-auto lg:mx-0">
+                                <div class="flex items-center space-x-2 bg-black/50 p-2 pl-3 rounded-2xl border border-white/10 flex-1">
+                                    <input type="text" readonly value="https://drive.google.com/file/d/14HsB7Ssi9TEKWa5vsO_soQKFxiitIcIF/view?usp=drivesdk" class="w-full bg-transparent text-xs text-slate-300 px-2 outline-none select-all truncate">
+                                    <button onclick="copyLink(this, 'https://drive.google.com/file/d/14HsB7Ssi9TEKWa5vsO_soQKFxiitIcIF/view?usp=drivesdk')" title="Salin Link" class="bg-white/10 hover:bg-blue-600 text-slate-300 hover:text-white p-2.5 rounded-xl transition-colors shrink-0">
+                                        <i class="fa-regular fa-copy text-xs"></i>
+                                    </button>
+                                </div>
+                                <a href="https://drive.google.com/file/d/14HsB7Ssi9TEKWa5vsO_soQKFxiitIcIF/view?usp=drivesdk" target="_blank" class="btn-shine bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold px-8 py-3.5 rounded-2xl flex items-center justify-center space-x-2 transition-all shadow-xl shadow-blue-600/30 hover:scale-[1.03] shrink-0">
+                                    <i class="fa-solid fa-download"></i>
+                                    <span>Download v5.5</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tutorial -->
+            <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="rounded-2xl glass border border-white/10 p-6 card-hover">
+                    <div class="flex items-start space-x-4 mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-400/25 flex items-center justify-center text-red-400 text-xl shrink-0">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-red-400 uppercase tracking-[0.15em]">Panduan Instalasi</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">Cara Instalasi Aplikasi</h4>
+                            <p class="text-xs text-slate-400 mt-1">Tonton video pendek agar tidak terjadi kesalahan saat instalasi.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-black/50 p-2 pl-3 rounded-xl border border-white/10 mb-3">
+                        <input type="text" readonly value="https://youtube.com/shorts/YhznCyuzBAg?si=mqHslxuDStKEKwYw" class="w-full bg-transparent text-xs text-slate-300 px-2 outline-none select-all truncate">
+                        <button onclick="copyLink(this, 'https://youtube.com/shorts/YhznCyuzBAg?si=mqHslxuDStKEKwYw')" title="Salin Link" class="bg-white/10 hover:bg-red-600 text-slate-300 hover:text-white p-2 rounded-lg transition-colors shrink-0">
+                            <i class="fa-regular fa-copy text-xs"></i>
+                        </button>
+                    </div>
+                    <a href="https://youtube.com/shorts/YhznCyuzBAg?si=mqHslxuDStKEKwYw" target="_blank" class="w-full bg-red-600/90 hover:bg-red-500 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-solid fa-play"></i><span>Tonton Tutorial Instalasi</span>
+                    </a>
+                </div>
+                <div class="rounded-2xl glass border border-white/10 p-6 card-hover">
+                    <div class="flex items-start space-x-4 mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-400/25 flex items-center justify-center text-amber-400 text-xl shrink-0">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-[0.15em]">Rekomendasi 10 Menit</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">Panduan Penggunaan 10 Menit</h4>
+                            <p class="text-xs text-slate-400 mt-1">Pelajari dasar penggunaan aplikasi supaya lancar dan tidak bingung.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-black/50 p-2 pl-3 rounded-xl border border-white/10 mb-3">
+                        <input type="text" readonly value="https://youtu.be/CdgkCD1zdKo?si=k4uv9pwD7GY-jNOV" class="w-full bg-transparent text-xs text-slate-300 px-2 outline-none select-all truncate">
+                        <button onclick="copyLink(this, 'https://youtu.be/CdgkCD1zdKo?si=k4uv9pwD7GY-jNOV')" title="Salin Link" class="bg-white/10 hover:bg-amber-600 text-slate-300 hover:text-white p-2 rounded-lg transition-colors shrink-0">
+                            <i class="fa-regular fa-copy text-xs"></i>
+                        </button>
+                    </div>
+                    <a href="https://youtu.be/CdgkCD1zdKo?si=k4uv9pwD7GY-jNOV" target="_blank" class="w-full bg-amber-600/90 hover:bg-amber-500 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-solid fa-play"></i><span>Tonton Panduan 10 Menit</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOTION CONTROL -->
+        <section class="mb-16">
+            <div class="flex items-center space-x-3 mb-7">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-cyan-500 to-teal-400 flex items-center justify-center text-white text-xl shadow-lg shadow-cyan-500/40">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white font-display flex items-center gap-3">
+                        <span>Motion Control</span>
+                        <span class="text-[11px] bg-cyan-500/15 text-cyan-300 px-3 py-1 rounded-full border border-cyan-400/25 font-semibold tracking-wide">TOOLS PENDUKUNG</span>
+                    </h2>
+                    <p class="text-slate-400 text-sm mt-0.5">APK Motion, Dashboard PC, Keys, dan Tutorial Pengambilan Key</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="rounded-2xl glass border border-white/10 p-6 flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-cyan-500/10 text-cyan-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-cyan-400/20">Android APK</span>
+                            <i class="fa-solid fa-mobile text-slate-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">APK Motion Control</h3>
+                        <p class="text-xs text-slate-400 mb-5">Aplikasi Motion Control versi Android siap pasang.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2 bg-black/50 p-2 pl-3 rounded-xl border border-white/10">
+                            <input type="text" readonly value="https://drive.google.com/file/d/1q7_0_H8SxvZe1txiVnUy5QAto3M1PpPD/view?usp=drivesdk" class="w-full bg-transparent text-xs text-slate-300 px-2 outline-none select-all truncate">
+                            <button onclick="copyLink(this, 'https://drive.google.com/file/d/1q7_0_H8SxvZe1txiVnUy5QAto3M1PpPD/view?usp=drivesdk')" title="Salin Link" class="bg-white/10 hover:bg-cyan-600 text-slate-300 hover:text-white p-2 rounded-lg transition-colors shrink-0">
+                                <i class="fa-regular fa-copy text-xs"></i>
+                            </button>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1q7_0_H8SxvZe1txiVnUy5QAto3M1PpPD/view?usp=drivesdk" target="_blank" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-solid fa-download"></i><span>Download APK Motion</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl glass border border-white/10 p-6 flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-indigo-500/10 text-indigo-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-indigo-400/20">Dashboard PC</span>
+                            <i class="fa-solid fa-desktop text-slate-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">Motion Control Web/PC</h3>
+                        <p class="text-xs text-slate-400 mb-5">Akses dashboard web Motion Control khusus perangkat PC/Laptop.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2 bg-black/50 p-2 pl-3 rounded-xl border border-white/10">
+                            <input type="text" readonly value="https://motioncontrol.afatech.dpdns.org/dashboard" class="w-full bg-transparent text-xs text-slate-300 px-2 outline-none select-all truncate">
+                            <button onclick="copyLink(this, 'https://motioncontrol.afatech.dpdns.org/dashboard')" title="Salin Link" class="bg-white/10 hover:bg-indigo-600 text-slate-300 hover:text-white p-2 rounded-lg transition-colors shrink-0">
+                                <i class="fa-regular fa-copy text-xs"></i>
+                            </button>
+                        </div>
+                        <a href="https://motioncontrol.afatech.dpdns.org/dashboard" target="_blank" class="w-full bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i><span>Buka Dashboard PC</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl glass border border-white/10 p-6 flex flex-col justify-between card-hover">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-cyan-500/10 text-cyan-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-cyan-400/20">Activation Keys</span>
+                            <i class="fa-solid fa-key text-slate-500"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-100 mb-2">APK Keys Motion Control</h3>
+                        <p class="text-xs text-slate-400 mb-5">Aplikasi pendukung untuk manajemen kunci akses motion control.</p>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-2 bg-black/50 p-2 pl-3 rounded-xl border border-white/10">
+                            <input type="text" readonly value="https://drive.google.com/file/d/1W6BdSE0chsp8AB3LDpjyBRkkwU4iEQki/view?usp=drivesdk" class="w-full bg-transparent text-xs text-slate-300 px-2 outline-none select-all truncate">
+                            <button onclick="copyLink(this, 'https://drive.google.com/file/d/1W6BdSE0chsp8AB3LDpjyBRkkwU4iEQki/view?usp=drivesdk')" title="Salin Link" class="bg-white/10 hover:bg-cyan-600 text-slate-300 hover:text-white p-2 rounded-lg transition-colors shrink-0">
+                                <i class="fa-regular fa-copy text-xs"></i>
+                            </button>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1W6BdSE0chsp8AB3LDpjyBRkkwU4iEQki/view?usp=drivesdk" target="_blank" class="w-full bg-cyan-600 hover:bg-cyan-500 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                            <i class="fa-solid fa-download"></i><span>Download APK Keys</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl glass border border-white/10 p-6 flex flex-col md:flex-row items-center justify-between gap-5">
+                <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-400/25 flex items-center justify-center text-red-400 text-xl shrink-0">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                    <div>
+                        <span class="text-[11px] font-bold text-red-400 uppercase tracking-[0.15em]">Tutorial Key</span>
+                        <h4 class="text-base font-bold text-white mt-0.5">Cara Ambil Key Motion Control</h4>
+                        <p class="text-xs text-slate-400 mt-1">Panduan singkat mendapatkan activation key dengan mudah.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto flex flex-col sm:flex-row gap-3">
+                    <div class="flex items-center space-x-2 bg-black/50 p-2 pl-3 rounded-xl border border-white/10">
+                        <input type="text" readonly value="https://youtube.com/shorts/t8ilMu-3aUk?si=AAAFAgi5H88vuY29" class="w-48 bg-transparent text-xs text-slate-300 px-2 outline-none select-all truncate">
+                        <button onclick="copyLink(this, 'https://youtube.com/shorts/t8ilMu-3aUk?si=AAAFAgi5H88vuY29')" title="Salin Link" class="bg-white/10 hover:bg-red-600 text-slate-300 hover:text-white p-2 rounded-lg transition-colors shrink-0">
+                            <i class="fa-regular fa-copy text-xs"></i>
+                        </button>
+                    </div>
+                    <a href="https://youtube.com/shorts/t8ilMu-3aUk?si=AAAFAgi5H88vuY29" target="_blank" class="bg-red-600 hover:bg-red-500 text-white text-sm font-semibold px-5 py-3 rounded-xl flex items-center justify-center space-x-2 transition-all shrink-0">
+                        <i class="fa-solid fa-play"></i><span>Tonton Tutorial</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA WHATSAPP -->
+        <section class="my-8 rounded-3xl p-[1.5px] bg-gradient-to-r from-emerald-500/60 via-teal-400/40 to-emerald-500/60">
+            <div class="rounded-3xl glass p-8 sm:p-12 text-center relative overflow-hidden">
+                <div class="absolute -right-20 -top-20 w-72 h-72 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-400 text-white text-3xl rounded-2xl mx-auto flex items-center justify-center shadow-lg shadow-emerald-500/40 mb-6 float-slow">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-3">Bergabung dengan Grup WhatsApp AFATech</h2>
+                    <p class="text-slate-400 text-sm sm:text-base mb-8 leading-relaxed">
+                        Dapatkan update terbaru, diskusi seputar aplikasi, serta bantuan langsung dari komunitas.
+                    </p>
+                    <a href="https://chat.whatsapp.com/Gxtq893YTjX3PK5SQRo2RQ" target="_blank" class="btn-shine inline-flex w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold px-8 py-4 rounded-2xl shadow-xl shadow-emerald-600/30 transition-all items-center justify-center space-x-3 text-base hover:scale-[1.03]">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Masuk Grup WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-slate-500 text-xs">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 <span class="grad-text font-bold">AFATech</span> Portal. All rights reserved.</p>
+            <div class="flex items-center space-x-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Systems Operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 glass border border-white/15 text-slate-200 px-4 py-3 rounded-2xl shadow-2xl flex items-center space-x-3 text-sm">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message">Link berhasil disalin!</span>
+    </div>
+
+    <script>
+        function copyLink(btn, url) {
+            const textArea = document.createElement("textarea");
+            textArea.value = url;
+            textArea.style.position = "fixed";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast("Link berhasil disalin ke clipboard!");
+                const icon = btn.querySelector('i');
+                const originalClass = icon.className;
+                icon.className = "fa-solid fa-check text-emerald-400 text-xs";
+                setTimeout(() => { icon.className = originalClass; }, 2000);
+            } catch (err) {
+                showToast("Gagal menyalin link", true);
+            }
+            document.body.removeChild(textArea);
+        }
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => { toast.classList.add('translate-y-24', 'opacity-0'); }, 3000);
+        }
+    </script>
+</body>
+</html>
