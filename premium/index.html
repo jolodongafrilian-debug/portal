@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFATech Premium — Download & Aktivasi</title>
+    <meta name="description" content="Halaman khusus pembeli AFATech AI Video Generator. Download aplikasi dan aktivasi lisensi Anda.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background: #04060d; }
+        .aurora {
+            position: fixed; inset: 0; z-index: -2; overflow: hidden;
+            background: #04060d;
+        }
+        .aurora span {
+            position: absolute; border-radius: 9999px; filter: blur(100px); opacity: .4;
+            animation: drift 16s ease-in-out infinite alternate;
+        }
+        .aurora span:nth-child(1) { width: 520px; height: 520px; left: -140px; top: -140px; background: #2563eb; }
+        .aurora span:nth-child(2) { width: 460px; height: 460px; right: -120px; top: 15%; background: #7c3aed; animation-delay: -5s; }
+        .aurora span:nth-child(3) { width: 420px; height: 420px; left: 35%; bottom: -160px; background: #06b6d4; animation-delay: -10s; }
+        .aurora span:nth-child(4) { width: 300px; height: 300px; right: 20%; bottom: 10%; background: #ec4899; opacity: .22; animation-delay: -7s; }
+        @keyframes drift {
+            from { transform: translate(0,0) scale(1); }
+            to { transform: translate(70px, 50px) scale(1.18); }
+        }
+        .grid-overlay {
+            position: fixed; inset: 0; z-index: -1; pointer-events: none;
+            background-image: radial-gradient(rgba(148,163,184,.1) 1px, transparent 1px);
+            background-size: 28px 28px;
+            mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+        }
+        .glass { background: rgba(15,23,42,.62); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+        .grad-text {
+            background: linear-gradient(100deg, #60a5fa, #a78bfa 45%, #22d3ee);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        .grad-gold {
+            background: linear-gradient(100deg, #fbbf24, #f59e0b 50%, #fcd34d);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+        }
+        @keyframes glowPulse {
+            0%,100% { box-shadow: 0 0 30px rgba(34,197,94,.35), 0 0 80px rgba(34,197,94,.12); }
+            50% { box-shadow: 0 0 55px rgba(34,197,94,.6), 0 0 130px rgba(34,197,94,.22); }
+        }
+        .glow-wa { animation: glowPulse 3.5s ease-in-out infinite; }
+        @keyframes glowBlue {
+            0%,100% { box-shadow: 0 0 30px rgba(59,130,246,.35), 0 0 80px rgba(59,130,246,.12); }
+            50% { box-shadow: 0 0 50px rgba(59,130,246,.55), 0 0 120px rgba(59,130,246,.2); }
+        }
+        .glow-cta { animation: glowBlue 4s ease-in-out infinite; }
+        .btn-shine { position: relative; overflow: hidden; }
+        .btn-shine::after {
+            content: ''; position: absolute; top: 0; left: -80%; width: 50%; height: 100%;
+            background: linear-gradient(100deg, transparent, rgba(255,255,255,.35), transparent);
+            transform: skewX(-20deg); animation: shine 3.5s ease-in-out infinite;
+        }
+        @keyframes shine { 0% { left: -80%; } 55%,100% { left: 130%; } }
+        .float-slow { animation: floatY 6s ease-in-out infinite; }
+        @keyframes floatY { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        .card-hover { transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s, box-shadow .35s; }
+        .card-hover:hover { transform: translateY(-6px); border-color: rgba(96,165,250,.45); box-shadow: 0 20px 50px -20px rgba(59,130,246,.35); }
+        .step-line::before {
+            content: ''; position: absolute; left: 27px; top: 60px; bottom: -30px; width: 2px;
+            background: linear-gradient(to bottom, rgba(59,130,246,.5), rgba(59,130,246,.05));
+        }
+        .step-item:last-child .step-line::before { display: none; }
+        @keyframes bounceSoft { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        .bounce-soft { animation: bounceSoft 2.5s ease-in-out infinite; }
+    </style>
+</head>
+<body class="text-slate-100 font-sans min-h-screen selection:bg-blue-600 selection:text-white">
+
+    <div class="aurora"><span></span><span></span><span></span><span></span></div>
+    <div class="grid-overlay"></div>
+
+    <!-- HEADER -->
+    <header class="sticky top-0 z-50 glass border-b border-white/10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="relative w-11 h-11 rounded-full overflow-hidden border-2 border-amber-400/60 shadow-lg shadow-amber-500/30">
+                    <img src="../afatech-logo.jpg" alt="AFATech Logo" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <span class="text-lg font-extrabold tracking-tight grad-gold font-display">AFATECH PREMIUM</span>
+                    <span class="block text-[10px] font-medium text-slate-400 tracking-[0.2em] uppercase">Area Khusus Pembeli</span>
+                </div>
+            </div>
+            <span class="hidden sm:inline-flex items-center space-x-2 bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-bold px-4 py-2 rounded-full">
+                <i class="fa-solid fa-crown"></i><span>Member Premium</span>
+            </span>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+
+        <!-- HERO : TERIMA KASIH -->
+        <section class="text-center pt-12 pb-10 sm:pt-16">
+            <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-400/25 px-4 py-2 rounded-full text-emerald-300 text-sm font-semibold mb-6 glass">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Pembayaran Berhasil Dikonfirmasi</span>
+            </div>
+            <h1 class="font-display text-4xl sm:text-6xl font-bold tracking-tight mb-5 leading-tight">
+                Terima Kasih Telah<br><span class="grad-gold">Membeli Produk Kami!</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-slate-400 text-base sm:text-lg leading-relaxed mb-2">
+                Selamat datang di keluarga besar <span class="text-white font-semibold">AFATech</span>.
+                Kepercayaan Anda adalah kehormatan bagi kami.
+            </p>
+            <p class="max-w-2xl mx-auto text-slate-500 text-sm sm:text-base leading-relaxed">
+                Ikuti 3 langkah mudah di bawah untuk mengunduh aplikasi dan mengaktifkan lisensi premium Anda.
+                Tim support kami siap membantu kapan pun Anda butuh.
+            </p>
+        </section>
+
+        <!-- 3 LANGKAH -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="rounded-3xl glass border border-white/10 p-6 card-hover text-center">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-white text-2xl font-bold font-display shadow-lg shadow-blue-600/40 mb-4">1</div>
+                    <h3 class="font-bold text-white text-lg mb-2">Download Aplikasi</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Unduh file APK AFATech AI Video Generator melalui tombol download di bawah.</p>
+                </div>
+                <div class="rounded-3xl glass border border-white/10 p-6 card-hover text-center">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-violet-600 to-purple-500 flex items-center justify-center text-white text-2xl font-bold font-display shadow-lg shadow-violet-600/40 mb-4">2</div>
+                    <h3 class="font-bold text-white text-lg mb-2">Install & Buka</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Install APK di HP Android Anda, lalu buka aplikasi untuk melihat kolom aktivasi.</p>
+                </div>
+                <div class="rounded-3xl glass border border-white/10 p-6 card-hover text-center">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-500 flex items-center justify-center text-white text-2xl font-bold font-display shadow-lg shadow-emerald-600/40 mb-4">3</div>
+                    <h3 class="font-bold text-white text-lg mb-2">Aktivasi via WhatsApp</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Klik tombol WhatsApp di bawah, kirim bukti bayar, terima license key Anda.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOAD -->
+        <section class="mb-12">
+            <div class="relative rounded-3xl p-[1.5px] bg-gradient-to-r from-blue-500 via-indigo-400 to-cyan-400 glow-cta">
+                <div class="rounded-3xl glass p-7 sm:p-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center gap-8">
+                        <div class="float-slow shrink-0 mx-auto lg:mx-0">
+                            <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-500 flex items-center justify-center shadow-2xl shadow-blue-600/50">
+                                <i class="fa-solid fa-clapperboard text-white text-5xl"></i>
+                            </div>
+                        </div>
+                        <div class="flex-1 text-center lg:text-left">
+                            <div class="flex flex-wrap items-center justify-center lg:justify-start gap-2 mb-3">
+                                <span class="bg-amber-500/15 text-amber-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-amber-400/25">PREMIUM</span>
+                                <span class="bg-blue-500/15 text-blue-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-blue-400/25">Android</span>
+                                <span class="bg-emerald-500/15 text-emerald-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-emerald-400/25">Tanpa Watermark</span>
+                            </div>
+                            <h3 class="font-display text-3xl sm:text-4xl font-bold text-white mb-2">AFATech AI Video Generator</h3>
+                            <p class="text-slate-400 text-sm sm:text-base mb-6 max-w-xl">
+                                Seedance 2.5 &bull; Video 5&ndash;30 detik &bull; 10 image reference &bull;
+                                Download dalam 1 aplikasi &bull; Generate bebas setiap hari.
+                            </p>
+                            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 max-w-2xl mx-auto lg:mx-0">
+                                <a href="https://drive.google.com/file/d/16rtVZmIlQ8mUbeIgPf69B0D-Sve4AgPw/view?usp=drivesdk" target="_blank" class="btn-shine bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold px-8 py-4 rounded-2xl flex items-center justify-center space-x-2 transition-all shadow-xl shadow-blue-600/30 hover:scale-[1.03] shrink-0 text-base">
+                                    <i class="fa-solid fa-download text-xl"></i>
+                                    <span>Download Aplikasi</span>
+                                </a>
+                                <button onclick="copyLink(this, 'https://drive.google.com/file/d/16rtVZmIlQ8mUbeIgPf69B0D-Sve4AgPw/view?usp=drivesdk')" class="bg-white/5 hover:bg-white/10 border border-white/15 text-slate-300 hover:text-white font-semibold px-6 py-4 rounded-2xl flex items-center justify-center space-x-2 transition-all shrink-0">
+                                    <i class="fa-regular fa-copy"></i><span>Salin Link</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AKTIVASI LISENSI : WHATSAPP -->
+        <section class="mb-12">
+            <div class="relative rounded-3xl p-[1.5px] bg-gradient-to-r from-emerald-500 via-teal-400 to-emerald-500 glow-wa">
+                <div class="rounded-3xl glass p-8 sm:p-12 text-center relative overflow-hidden">
+                    <div class="absolute -right-24 -top-24 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute -left-24 -bottom-24 w-80 h-80 bg-teal-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="relative z-10 max-w-2xl mx-auto">
+                        <div class="bounce-soft w-20 h-20 bg-gradient-to-br from-emerald-500 to-teal-400 text-white text-4xl rounded-3xl mx-auto flex items-center justify-center shadow-2xl shadow-emerald-500/50 mb-6">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Aktivasi Lisensi Anda</h2>
+                        <p class="text-slate-400 text-sm sm:text-base mb-2 leading-relaxed">
+                            Klik tombol di bawah untuk langsung terhubung dengan <span class="text-white font-semibold">Admin AFATech</span> via WhatsApp.
+                        </p>
+                        <p class="text-slate-500 text-sm mb-8 leading-relaxed">
+                            Kirimkan <span class="text-slate-300 font-medium">bukti pembayaran</span> Anda,
+                            admin akan segera mengirimkan <span class="text-slate-300 font-medium">license key</span> premium Anda.
+                        </p>
+                        <a href="https://wa.me/6285123702796?text=Halo%20Admin%20AFATech!%20Saya%20telah%20membeli%20AFATech%20AI%20Video%20Generator.%20Berikut%20bukti%20pembayaran%20saya%3A" target="_blank" class="btn-shine inline-flex w-full sm:w-auto bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold px-10 py-5 rounded-2xl shadow-2xl shadow-emerald-600/40 transition-all items-center justify-center space-x-3 text-lg hover:scale-[1.04]">
+                            <i class="fa-brands fa-whatsapp text-3xl"></i>
+                            <span>Chat Admin via WhatsApp</span>
+                        </a>
+                        <p class="text-slate-500 text-xs mt-5">
+                            <i class="fa-solid fa-bolt text-amber-400 mr-1"></i>
+                            Respon cepat &bull; 1 key untuk 1 HP &bull; Support penuh selama masa lisensi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TUTORIAL -->
+        <section class="mb-12">
+            <div class="flex items-center space-x-3 mb-6">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-red-500 to-orange-400 flex items-center justify-center text-white text-xl shadow-lg shadow-red-500/40">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white font-display">Panduan Video</h2>
+                    <p class="text-slate-400 text-sm mt-0.5">Tonton dulu biar instalasi & aktivasi lancar</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="rounded-2xl glass border border-white/10 p-6 card-hover">
+                    <div class="flex items-start space-x-4 mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-400/25 flex items-center justify-center text-red-400 text-xl shrink-0">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-red-400 uppercase tracking-[0.15em]">Wajib Tonton</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">Cara Instalasi Aplikasi</h4>
+                            <p class="text-xs text-slate-400 mt-1">Panduan instalasi APK agar tidak terjadi kesalahan.</p>
+                        </div>
+                    </div>
+                    <a href="https://youtube.com/shorts/YhznCyuzBAg?si=mqHslxuDStKEKwYw" target="_blank" class="w-full bg-red-600/90 hover:bg-red-500 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-solid fa-play"></i><span>Tonton Tutorial Instalasi</span>
+                    </a>
+                </div>
+                <div class="rounded-2xl glass border border-white/10 p-6 card-hover">
+                    <div class="flex items-start space-x-4 mb-5">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-400/25 flex items-center justify-center text-amber-400 text-xl shrink-0">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold text-amber-400 uppercase tracking-[0.15em]">Rekomendasi 10 Menit</span>
+                            <h4 class="text-base font-bold text-white mt-0.5">Panduan Penggunaan</h4>
+                            <p class="text-xs text-slate-400 mt-1">Pelajari dasar penggunaan aplikasi supaya lancar.</p>
+                        </div>
+                    </div>
+                    <a href="https://youtu.be/CdgkCD1zdKo?si=k4uv9pwD7GY-jNOV" target="_blank" class="w-full bg-amber-600/90 hover:bg-amber-500 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center space-x-2 transition-all">
+                        <i class="fa-solid fa-play"></i><span>Tonton Panduan 10 Menit</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- KETENTUAN -->
+        <section class="mb-8">
+            <div class="rounded-3xl glass border border-white/10 p-7 sm:p-8">
+                <div class="flex items-center space-x-3 mb-5">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-400/25 flex items-center justify-center text-blue-400 text-lg">
+                        <i class="fa-solid fa-file-contract"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-white font-display">Ketentuan Lisensi</h2>
+                </div>
+                <ul class="space-y-3 text-sm text-slate-400">
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                        <span>1 license key berlaku untuk <span class="text-white font-medium">1 HP</span>.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                        <span>Masa aktif dihitung sejak key pertama kali digunakan.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                        <span>Pindah HP? Hubungi admin via WhatsApp untuk reset perangkat (maks. 3x).</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                        <span>Update aplikasi gratis selama masa lisensi aktif.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i class="fa-solid fa-check text-emerald-400 mt-1 shrink-0"></i>
+                        <span>Dilarang keras membagikan, menjual ulang, atau menyebarluaskan license key.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PENUTUP -->
+        <section class="text-center py-8">
+            <div class="inline-flex items-center space-x-2 text-slate-500 text-sm mb-3">
+                <i class="fa-solid fa-heart text-rose-400"></i>
+                <span>Terima kasih atas kepercayaan Anda berbelanja di AFATech</span>
+            </div>
+            <p class="text-slate-600 text-xs">Butuh bantuan? Tim support kami siap membantu via WhatsApp kapan pun.</p>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-white/10 py-8 text-center text-slate-500 text-xs">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 <span class="grad-gold font-bold">AFATech</span> Premium. All rights reserved.</p>
+            <div class="flex items-center space-x-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Systems Operational</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WA BUTTON -->
+    <a href="https://wa.me/6285123702796?text=Halo%20Admin%20AFATech!%20Saya%20telah%20membeli%20AFATech%20AI%20Video%20Generator.%20Berikut%20bukti%20pembayaran%20saya%3A" target="_blank" class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500 flex items-center justify-center text-white text-3xl shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-transform glow-wa" title="Chat Admin">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <div id="toast" class="fixed bottom-6 left-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 glass border border-white/15 text-slate-200 px-4 py-3 rounded-2xl shadow-2xl flex items-center space-x-3 text-sm">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toast-message">Link berhasil disalin!</span>
+    </div>
+
+    <script>
+        function copyLink(btn, url) {
+            const textArea = document.createElement("textarea");
+            textArea.value = url;
+            textArea.style.position = "fixed";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showToast("Link berhasil disalin ke clipboard!");
+                const icon = btn.querySelector('i');
+                const originalClass = icon.className;
+                icon.className = "fa-solid fa-check text-emerald-400";
+                setTimeout(() => { icon.className = originalClass; }, 2000);
+            } catch (err) {
+                showToast("Gagal menyalin link", true);
+            }
+            document.body.removeChild(textArea);
+        }
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            setTimeout(() => { toast.classList.add('translate-y-24', 'opacity-0'); }, 3000);
+        }
+    </script>
+</body>
+</html>
