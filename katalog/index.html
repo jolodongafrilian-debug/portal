@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFATech — Katalog Produk</title>
+<meta name="description" content="Katalog produk AFATech AI Video Generator. Pilih paket premium Anda dan pesan via WhatsApp.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = { theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans','sans-serif'], display: ['Space Grotesk','sans-serif'] } } } }
+</script>
+<style>
+body { background: #070b14; }
+.glass { background: rgba(255,255,255,.04); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.card-hover { transition: transform .35s ease, box-shadow .35s ease; }
+.card-hover:hover { transform: translateY(-8px); box-shadow: 0 25px 60px -15px rgba(59,130,246,.35); }
+.btn-shine { position: relative; overflow: hidden; }
+.btn-shine::after { content:''; position:absolute; top:0; left:-80%; width:50%; height:100%; background:linear-gradient(120deg,transparent,rgba(255,255,255,.35),transparent); transform:skewX(-20deg); animation:shine 3.2s infinite; }
+@keyframes shine { 0%{left:-80%} 60%{left:130%} 100%{left:130%} }
+.float-slow { animation: floaty 5s ease-in-out infinite; }
+@keyframes floaty { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.badge-pop { animation: pop 2.4s ease-in-out infinite; }
+@keyframes pop { 0%,100%{transform:scale(1)} 50%{transform:scale(1.06)} }
+.hero-glow { background: radial-gradient(ellipse 60% 45% at 50% 0%, rgba(59,130,246,.22), transparent 70%); }
+.gold-text { background: linear-gradient(135deg,#f6d365,#d4af37 45%,#fff3b0 60%,#b8860b); -webkit-background-clip:text; background-clip:text; color:transparent; }
+</style>
+</head>
+<body class="text-slate-200 font-sans antialiased">
+
+<!-- HERO -->
+<header class="relative overflow-hidden">
+<div class="absolute inset-0 hero-glow pointer-events-none"></div>
+<div class="relative max-w-6xl mx-auto px-5 pt-14 pb-10 text-center">
+<div class="float-slow inline-flex items-center space-x-2 glass border border-white/10 rounded-full px-5 py-2 mb-6">
+<i class="fa-solid fa-bag-shopping text-blue-400"></i>
+<span class="text-xs font-semibold tracking-[0.2em] uppercase text-slate-300">Katalog Resmi AFATech</span>
+</div>
+<h1 class="font-display text-4xl sm:text-6xl font-bold text-white leading-tight mb-4">AFATech <span class="text-blue-400">AI Video Generator</span></h1>
+<p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Ubah ide jadi video sinematik 5–30 detik dalam hitungan detik. Pilih paket di bawah, pesan langsung via WhatsApp.</p>
+<div class="flex flex-wrap justify-center gap-2 mt-6 text-xs">
+<span class="glass border border-white/10 rounded-full px-4 py-1.5"><i class="fa-solid fa-check text-emerald-400 mr-1"></i>Seedance 2.5</span>
+<span class="glass border border-white/10 rounded-full px-4 py-1.5"><i class="fa-solid fa-check text-emerald-400 mr-1"></i>Tanpa Watermark</span>
+<span class="glass border border-white/10 rounded-full px-4 py-1.5"><i class="fa-solid fa-check text-emerald-400 mr-1"></i>Generate Bebas Tiap Hari</span>
+</div>
+</div>
+</header>
+
+<!-- PRODUK -->
+<main class="max-w-6xl mx-auto px-5 pb-16">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+
+<!-- 30 HARI -->
+<div class="glass border border-white/10 rounded-3xl overflow-hidden card-hover flex flex-col">
+<img src="img/p30.webp" alt="Premium 30 Hari" class="w-full aspect-square object-cover">
+<div class="p-6 flex flex-col flex-1">
+<h3 class="font-display text-xl font-bold text-white mb-1">Premium 30 Hari</h3>
+<p class="text-slate-400 text-sm mb-4">Buat yang mau coba-coba dulu sebulan penuh.</p>
+<div class="flex items-end space-x-2 mb-5">
+<span class="text-3xl font-extrabold text-white">Rp50<span class="text-lg">.000</span></span>
+<span class="text-slate-500 text-sm mb-1">/ 30 hari</span>
+</div>
+<ul class="text-sm text-slate-300 space-y-2 mb-6 flex-1">
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Seedance 2.5, 5–30 detik</li>
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>10 image reference</li>
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Tanpa watermark</li>
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Generate bebas tiap hari</li>
+</ul>
+<a href="https://wa.me/6285123702796?text=Halo%20Admin%20AFATech!%20Saya%20tertarik%20dengan%20paket%20Premium%2030%20Hari%20(Rp50.000).%20Bagaimana%20cara%20memesannya%3F" target="_blank" class="btn-shine w-full bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold py-3.5 rounded-2xl flex items-center justify-center space-x-2 transition-all">
+<i class="fa-brands fa-whatsapp text-xl"></i><span>Pesan via WhatsApp</span>
+</a>
+</div>
+</div>
+
+<!-- 3 BULAN -->
+<div class="relative glass border-2 border-blue-500/60 rounded-3xl overflow-hidden card-hover flex flex-col shadow-2xl shadow-blue-600/20">
+<div class="badge-pop absolute top-4 right-4 z-10 bg-gradient-to-r from-amber-400 to-yellow-500 text-black text-xs font-extrabold px-4 py-1.5 rounded-full shadow-lg">PALING LARIS</div>
+<img src="img/p3bulan.webp" alt="Paket Hemat 3 Bulan" class="w-full aspect-square object-cover">
+<div class="p-6 flex flex-col flex-1">
+<h3 class="font-display text-xl font-bold text-white mb-1">Paket Hemat 3 Bulan</h3>
+<p class="text-slate-400 text-sm mb-4">Hemat! Cuma Rp33rb-an per bulan.</p>
+<div class="flex items-end space-x-2 mb-1">
+<span class="text-3xl font-extrabold text-white">Rp100<span class="text-lg">.000</span></span>
+<span class="text-slate-500 text-sm mb-1">/ 3 bulan</span>
+</div>
+<p class="text-emerald-400 text-xs font-semibold mb-4"><i class="fa-solid fa-tag mr-1"></i>Hemat Rp50.000 dibanding bulanan!</p>
+<ul class="text-sm text-slate-300 space-y-2 mb-6 flex-1">
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Semua fitur Premium 30 Hari</li>
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Aktif 90 hari penuh</li>
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Update selama masa aktif</li>
+<li><i class="fa-solid fa-check text-emerald-400 mr-2"></i>Support prioritas</li>
+</ul>
+<a href="https://wa.me/6285123702796?text=Halo%20Admin%20AFATech!%20Saya%20tertarik%20dengan%20Paket%20Hemat%203%20Bulan%20(Rp100.000).%20Bagaimana%20cara%20memesannya%3F" target="_blank" class="btn-shine w-full bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold py-3.5 rounded-2xl flex items-center justify-center space-x-2 transition-all">
+<i class="fa-brands fa-whatsapp text-xl"></i><span>Pesan via WhatsApp</span>
+</a>
+</div>
+</div>
+
+<!-- LIFETIME -->
+<div class="relative glass border border-amber-400/40 rounded-3xl overflow-hidden card-hover flex flex-col shadow-2xl shadow-amber-500/10">
+<div class="badge-pop absolute top-4 right-4 z-10 bg-gradient-to-r from-amber-300 to-yellow-500 text-black text-xs font-extrabold px-4 py-1.5 rounded-full shadow-lg"><i class="fa-solid fa-crown mr-1"></i>TERBAIK</div>
+<img src="img/plifetime.webp" alt="Paket Lifetime" class="w-full aspect-square object-cover">
+<div class="p-6 flex flex-col flex-1">
+<h3 class="font-display text-xl font-bold mb-1"><span class="gold-text">Lifetime</span></h3>
+<p class="text-slate-400 text-sm mb-4">Sekali bayar, akses selamanya.</p>
+<div class="flex items-end space-x-2 mb-5">
+<span class="text-3xl font-extrabold text-white">Rp200<span class="text-lg">.000</span></span>
+<span class="text-slate-500 text-sm mb-1">/ selamanya</span>
+</div>
+<ul class="text-sm text-slate-300 space-y-2 mb-6 flex-1">
+<li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Semua fitur premium, selamanya</li>
+<li><i class="fa-solid fa-gift text-amber-400 mr-2"></i><span class="font-semibold text-white">BONUS: Tools Motion Control</span></li>
+<li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Motion Control s/d 30 detik HD</li>
+<li><i class="fa-solid fa-check text-amber-400 mr-2"></i>Update selamanya</li>
+</ul>
+<a href="https://wa.me/6285123702796?text=Halo%20Admin%20AFATech!%20Saya%20tertarik%20dengan%20paket%20Lifetime%20(Rp200.000)%20%2B%20bonus%20Motion%20Control.%20Bagaimana%20cara%20memesannya%3F" target="_blank" class="btn-shine w-full bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-black font-bold py-3.5 rounded-2xl flex items-center justify-center space-x-2 transition-all">
+<i class="fa-brands fa-whatsapp text-xl"></i><span>Pesan via WhatsApp</span>
+</a>
+</div>
+</div>
+
+</div>
+
+<!-- CARA PESAN -->
+<section class="mt-14 glass border border-white/10 rounded-3xl p-8">
+<h2 class="font-display text-2xl font-bold text-white text-center mb-8">Cara Pesan — Gampang Banget</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+<div>
+<div class="w-14 h-14 mx-auto rounded-2xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl font-bold mb-3">1</div>
+<p class="text-white font-semibold mb-1">Pilih Paket</p>
+<p class="text-slate-400 text-sm">Klik tombol WhatsApp di paket favoritmu.</p>
+</div>
+<div>
+<div class="w-14 h-14 mx-auto rounded-2xl bg-emerald-600/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl font-bold mb-3">2</div>
+<p class="text-white font-semibold mb-1">Bayar & Kirim Bukti</p>
+<p class="text-slate-400 text-sm">Transfer, lalu kirim bukti pembayaran ke admin.</p>
+</div>
+<div>
+<div class="w-14 h-14 mx-auto rounded-2xl bg-amber-600/20 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl font-bold mb-3">3</div>
+<p class="text-white font-semibold mb-1">Terima License Key</p>
+<p class="text-slate-400 text-sm">Admin kirim key + link download aplikasi.</p>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="mt-10 text-center">
+<a href="https://wa.me/6285123702796?text=Halo%20Admin%20AFATech!%20Saya%20mau%20tanya-tanya%20dulu%20tentang%20produk%20AFATech." target="_blank" class="btn-shine inline-flex bg-gradient-to-r from-emerald-600 to-teal-500 hover:from-emerald-500 hover:to-teal-400 text-white font-bold px-10 py-4 rounded-2xl shadow-2xl shadow-emerald-600/40 items-center space-x-3 text-lg transition-all hover:scale-[1.03]">
+<i class="fa-brands fa-whatsapp text-2xl"></i><span>Chat Admin Sekarang</span>
+</a>
+<p class="text-slate-500 text-sm mt-4">Respon cepat &bull; Khusus pengguna Android</p>
+</section>
+</main>
+
+<footer class="border-t border-white/10 py-8 text-center">
+<p class="text-slate-500 text-sm">&copy; 2026 AFATech. Seluruh hak cipta dilindungi.</p>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/6285123702796?text=Halo%20Admin%20AFATech!%20Saya%20mau%20tanya-tanya%20dulu%20tentang%20produk%20AFATech." target="_blank" class="fixed bottom-5 right-5 z-50 w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-400 rounded-full flex items-center justify-center text-white text-2xl shadow-2xl shadow-emerald-500/50 hover:scale-110 transition-transform">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
